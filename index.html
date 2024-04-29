@@ -15,21 +15,6 @@
 <meta name="author" content="">
 
 <!-- Site Icons -->
-<link rel="shortcut icon" href="images/apple-touch-icon.png" type="image/x-icon" />
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- Site CSS -->
-<link rel="stylesheet" href="style.css">
-<!-- Responsive CSS -->
-<link rel="stylesheet" href="css/responsive.css">
-<!-- Custom CSS -->
-<link rel="stylesheet" href="css/custom.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-	integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-	crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -229,20 +214,20 @@
 
 			<button class="collapsible">Best paper award (2nd position), ECCE, CUET</button>
 			<div class="content">
-				<img src="uploads/best-paper.jpg" loading="lazy" width="800" height="337" style="width: 300px; height: 337px;"
-					alt="Best Paper Award">
+				<img src="uploads/best-paper.jpg" loading="lazy" width="800" height="337"
+					style="width: 300px; height: 337px;" alt="Best Paper Award">
 			</div>
 
 			<button class="collapsible">Second Runner-Up UIU Deep Learning Contest (Fall 2022)</button>
 			<div class="content">
-				<img src="uploads/deep-learning.jpeg" loading="lazy" width="800" height="337" style="width: 300px; height: 337px;"
-					alt="UIU Deep Learning Contest">
+				<img src="uploads/deep-learning.jpeg" loading="lazy" width="800" height="337"
+					style="width: 300px; height: 337px;" alt="UIU Deep Learning Contest">
 			</div>
 
 			<button class="collapsible">Qualified for ICPC Regional 2021</button>
 			<div class="content">
-				<img src="uploads/icpc.jpeg" loading="lazy" width="800" height="337" style="width: 300px; height: 337px;"
-					alt="UIU Deep Learning Contest">
+				<img src="uploads/icpc.jpeg" loading="lazy" width="800" height="337"
+					style="width: 300px; height: 337px;" alt="UIU Deep Learning Contest">
 			</div>
 
 			<button class="collapsible">Solved 1000+ problems on different sites</button>
@@ -428,7 +413,7 @@
 				<div class="col-md-4 col-sm-6 col-lg-4">
 					<div class="post-box">
 						<div class="post-thumb">
-							<img src="uploads/chatgpt.png"  loading="lazy" class="img-fluid" alt="post-img" />
+							<img src="uploads/chatgpt.png" loading="lazy" class="img-fluid" alt="post-img" />
 
 						</div>
 						<div class="post-info">
@@ -786,40 +771,58 @@
 			<script>
 				// Function to load images after DOM content is fully loaded
 				window.addEventListener('DOMContentLoaded', (event) => {
-				  document.getElementById('king_saud_university_grant_img').src = 'uploads/deep-learning.jpeg';
-				  document.getElementById('advanced_research_grant_img').src = 'uploads/advanced-research.jpeg';
-				  document.getElementById('best_paper_award_img').src = 'uploads/best-paper-award.jpeg';
-				  document.getElementById('uiu_deep_learning_img').src = 'uploads/uiu-deep-learning.jpeg';
-				  document.getElementById('solved_problems_img').src = 'uploads/solved-problems.jpeg';
+					document.getElementById('king_saud_university_grant_img').src = 'uploads/deep-learning.jpeg';
+					document.getElementById('advanced_research_grant_img').src = 'uploads/advanced-research.jpeg';
+					document.getElementById('best_paper_award_img').src = 'uploads/best-paper-award.jpeg';
+					document.getElementById('uiu_deep_learning_img').src = 'uploads/uiu-deep-learning.jpeg';
+					document.getElementById('solved_problems_img').src = 'uploads/solved-problems.jpeg';
 				});
-			  
+
 				// Collapsible functionality
 				var coll = document.getElementsByClassName("collapsible");
 				var i;
-			  
+
 				for (i = 0; i < coll.length; i++) {
-				  coll[i].addEventListener("click", function () {
-					var content = this.nextElementSibling;
-					if (content.style.maxHeight) {
-					  // Close the clicked item
-					  content.style.maxHeight = null;
-					  this.classList.remove("active");
-					} else {
-					  // Close all other open items
-					  for (var j = 0; j < coll.length; j++) {
-						var otherContent = coll[j].nextElementSibling;
-						if (otherContent != content && otherContent.style.maxHeight) {
-						  otherContent.style.maxHeight = null;
-						  coll[j].classList.remove("active");
+					coll[i].addEventListener("click", function () {
+						var content = this.nextElementSibling;
+						if (content.style.maxHeight) {
+							// Close the clicked item
+							content.style.maxHeight = null;
+							this.classList.remove("active");
+						} else {
+							// Close all other open items
+							for (var j = 0; j < coll.length; j++) {
+								var otherContent = coll[j].nextElementSibling;
+								if (otherContent != content && otherContent.style.maxHeight) {
+									otherContent.style.maxHeight = null;
+									coll[j].classList.remove("active");
+								}
+							}
+							// Open the clicked item
+							content.style.maxHeight = content.scrollHeight + "px";
+							this.classList.add("active");
 						}
-					  }
-					  // Open the clicked item
-					  content.style.maxHeight = content.scrollHeight + "px";
-					  this.classList.add("active");
-					}
-				  });
+					});
 				}
-			  </script>
+			</script>
+
+			<link rel="shortcut icon" href="images/apple-touch-icon.png" type="image/x-icon" />
+			<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+			<!-- Bootstrap CSS -->
+			<link rel="stylesheet" href="css/bootstrap.min.css">
+			<!-- Site CSS -->
+			<link rel="stylesheet" href="style.css">
+			<!-- Responsive CSS -->
+			<link rel="stylesheet" href="css/responsive.css">
+			<!-- Custom CSS -->
+			<link rel="stylesheet" href="css/custom.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+				integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+				crossorigin="anonymous" referrerpolicy="no-referrer" />
+			<link rel="stylesheet"
+				href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </body>
 
