@@ -2695,7 +2695,7 @@ select.mobile-device {
     line-height: 1 !important:
 }
 
-#preloader {
+/* #preloader {
     width: 100%;
     height: 100%;
     top: 0;
@@ -2706,7 +2706,7 @@ select.mobile-device {
     z-index: 11000;
     position: fixed;
     display: block
-}
+} */
 
 
 #main-ld {

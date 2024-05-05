@@ -25,11 +25,11 @@
 <body id="page-top" class="politics_version">
 
 	<!-- LOADER -->
-	<div id="preloader">
+	<!-- <div id="preloader">
 		<div id="main-ld">
 			<div id="loader"></div>
 		</div>
-	</div><!-- end loader -->
+	</div>end loader -->
 	<!-- END LOADER -->
 
 	<!-- Navigation -->
@@ -434,22 +434,36 @@
 					</div>
 				</div>
 
+				<div class="col-md-4 col-sm-6 col-lg-4">
+					<div class="post-box">
+						<div class="post-thumb">
+							<img src="uploads/feature-scale.png" loading="lazy" class="img-fluid" alt="post-img" />
+						</div>
+						<div class="post-info">
+							<h4><a href="https://arxiv.org/abs/2404.17937">DTization: A New Method for Supervised Feature Scaling</a> </h4>
+							<ul>
+								<li><b>Niful Islam</b></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
 
 
 			</div>
 		</div>
 	</div>
 
-	<div id="project" class="section lb">
+	<!-- <div id="project" class="section lb">
 		<div class="container">
 			<div class="section-title text-center">
-				<!-- <h3>Projects</h3>
+				<h3>Projects</h3>
 					<p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam
 						risus.
-					</p> -->
+					</p>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- <div class="gallery-menu row">
 					<div class="col-md-12">
@@ -807,7 +821,7 @@
 					});
 				}
 			</script>
-			
+
 
 			<script>
 				// Function to asynchronously load CSS files
@@ -817,15 +831,24 @@
 					link.href = url;
 					document.head.appendChild(link);
 				}
-		
+
 				// Load CSS files asynchronously after the content is loaded
 				document.addEventListener("DOMContentLoaded", function () {
-					loadCSS('css/bootstrap.min.css');
-					loadCSS('style.css');
 					loadCSS('css/responsive.css');
 					loadCSS('css/custom.css');
-					//loadCSS('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
-					//loadCSS('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+					loadCSS('css/bootstrap.min.css');
+					loadCSS('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+					loadCSS('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+					// loadCSS('style.css');
+					// Load style.css separately after other resources
+					var styleLink = document.createElement('link');
+					styleLink.rel = 'stylesheet';
+					styleLink.href = 'style.css';
+					styleLink.onload = function () {
+						// Style.css loaded successfully
+						console.log('style.css loaded successfully');
+					};
+					document.head.appendChild(styleLink);
 				});
 			</script>
 
